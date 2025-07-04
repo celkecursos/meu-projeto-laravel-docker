@@ -8,6 +8,6 @@
 
     </head>
     <body>
-        Bem-vindo à Celke!
+        Bem-vindo à Celke Prime!
     </body>
 </html>

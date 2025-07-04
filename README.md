@@ -34,7 +34,7 @@ php artisan key:generate
 ```
 
 - Acessar WSL.
-* PHP - Necessário PHP 8.4 ou superior: php -v
+- PHP - Necessário PHP 8.4 ou superior: php -v
 
 Acessar o diretório que será criado o projeto "c:/xampp/htdocs/celke/meu-projeto-docker-baixado". /mnt/c → é onde o WSL monta o disco C: do Windows. /mnt/c/xampp/htdocs/celke → equivale a C:\xampp/htdocs/celke.
 ```
