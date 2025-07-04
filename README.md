@@ -1,3 +1,66 @@
+## Requisitos
+
+* Docker - Conferir a instalação no PowerShell: docker --version
+* Git - Conferir a instalação: git --version
+* Composer - Conferir a instalação: composer --version
+* Node.js - Conferir a instalação: node -v
+
+## Como rodar o projeto baixado
+
+- Baixar o projeto do servidor de versionamento (GitHub).
+Baixar os arquivos do GitHub.
+```
+git clone <repositorio_url> .
+```
+```
+git clone https://github.com/celkecursos/meu-projeto-laravel-docker.git .
+```
+
+- Duplicar o arquivo ".env.example" e renomear para ".env".
+
+Instalar as dependências do PHP
+```
+composer install
+```
+
+Instalar todas as dependências indicadas pelo package.json.
+```
+npm install
+```
+
+Gerar a chave para o arquivo .env.
+```
+php artisan key:generate
+```
+
+- Acessar WSL.
+* PHP - Necessário PHP 8.4 ou superior: php -v
+
+Acessar o diretório que será criado o projeto "c:/xampp/htdocs/celke/meu-projeto-docker-baixado". /mnt/c → é onde o WSL monta o disco C: do Windows. /mnt/c/xampp/htdocs/celke → equivale a C:\xampp/htdocs/celke.
+```
+cd /mnt/c/xampp/htdocs/celke/meu-projeto-docker-baixado
+```
+
+Criar os containers com Laravel e MySQL.
+```
+./vendor/bin/sail up -d
+```
+
+Rodar a migrate para criar a base de dados e as tabelas.
+```
+./vendor/bin/sail artisan migrate
+```
+
+Rodar as seedeers para cadastrar registro de teste.
+```
+./vendor/bin/sail artisan db:seed
+```
+
+Acessar a aplicação no navegador.
+```
+http://127.0.0.1
+```
+
 ## Criar o projeto com Laravel no PC e criar o container no Docker
 
 - Acessar o prompt de comando ou o terminal do editor VSCode.
@@ -160,7 +223,7 @@ git commit -m "Base do projeto"
 
 Adicionar um repositório remoto ao repositório local.
 ```
-git remote add origin https://github.com/celkecursos/tutorial-como-usar-laravel-12.git
+git remote add origin https://github.com/celkecursos/meu-projeto-laravel-docker.git
 ```
 
 Enviar os commits locais para um repositório remoto.
