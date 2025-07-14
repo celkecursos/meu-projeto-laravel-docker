@@ -5,7 +5,7 @@
 * Composer - Conferir a instalação: composer --version
 * Node.js - Conferir a instalação: node -v
 
-## Como rodar o projeto baixado
+## Como rodar o projeto baixado 
 
 - Baixar o projeto do servidor de versionamento (GitHub).
 Baixar os arquivos do GitHub.
